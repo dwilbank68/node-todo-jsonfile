@@ -30,7 +30,9 @@ const argv = yargs
     })
     .help()
     .argv;
-var command = process.argv[2];
+
+//var command = process.argv[2];
+var command = argv._[0];
 
 if (command === 'add') {
     var note = notes.addNote(argv.title, argv.body);
